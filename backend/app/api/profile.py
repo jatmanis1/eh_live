@@ -11,7 +11,7 @@ class ProfileApi(Resource):
         user = User.query.filter_by(user_username=user_username).first()
 
         if not user:
-            return {"message": "Uwwser not found"}, 200
+            return {"message": "Uwwser not found"}, 404
 
         return jsonify({
             "user_name": user.user_name,
