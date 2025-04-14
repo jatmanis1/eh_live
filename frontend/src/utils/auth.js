@@ -8,7 +8,7 @@ const jwtDecode = jwtDecodeImport.default || jwtDecodeImport;
 export function isAuthenticated() {
     const token = localStorage.getItem('token')
     console.log('ghjkl', token)
-    if (!token) { console.log('no token found') return false;}
+    if (!token) { console.log('no token found'); return false;}
     try {
         // const { exp } = jwtDecode(token);
 
@@ -16,7 +16,7 @@ export function isAuthenticated() {
         if (!token) {
             localStorage.removeItem('token')
             localStorage.removeItem('user')
-            console.log('token not found or expired')
+            console.log('token not found or expired');
             return false;
 
         }
