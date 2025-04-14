@@ -5,11 +5,11 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
         <div class="container-fluid d-flex justify-content-between">
           <h5 class="mb-0">Admin Dashboard</h5>
-          <div  class=" text-primary">
+          <div class=" text-primary">
             Get Data Of Closed Requests in mail
-          <a @click="triggerjob" class="btn btn-outline-primary me-2 ">
-            <i class="bi bi-person-circle"></i> Send Now
-          </a>
+            <a @click="triggerjob" class="btn btn-outline-primary me-2 ">
+              <i class="bi bi-person-circle"></i> Send Now
+            </a>
           </div>
         </div>
       </nav>
@@ -97,7 +97,7 @@ export default {
     async triggerjob() {
       try {
         const response = await this.$axios.get('http://localhost:5000/job1', {
-          
+
         });
 
         if (response.data) {

@@ -5,12 +5,8 @@
       <div class="card-body d-flex justify-content-between align-items-center">
         <h2 class="text-primary mb-0">Welcome, {{ username }}!</h2>
         <div>
-          <input
-            v-model="searchQuery"
-            type="text"
-            class="form-control d-inline w-auto me-2"
-            placeholder="Search by username"
-          />
+          <input v-model="searchQuery" type="text" class="form-control d-inline w-auto me-2"
+            placeholder="Search by username" />
           <!-- <button @click="collect_data" class="btn btn-outline-primary me-2">
             <i class="bi bi-download"></i> Load Data
           </button>
@@ -64,10 +60,12 @@
                 </td>
                 <td>
                   <div class="btn-group" role="group">
-                    <button v-if="req.user_status == 'unblocked'" @click.prevent="Block(req)" class="btn btn-warning btn-sm">
+                    <button v-if="req.user_status == 'unblocked'" @click.prevent="Block(req)"
+                      class="btn btn-warning btn-sm">
                       <i class="bi bi-lock-fill"></i> Block
                     </button>
-                    <button v-if="req.user_status == 'blocked'" @click.prevent="Unblock(req)" class="btn btn-success btn-sm">
+                    <button v-if="req.user_status == 'blocked'" @click.prevent="Unblock(req)"
+                      class="btn btn-success btn-sm">
                       <i class="bi bi-unlock-fill"></i> Unblock
                     </button>
                     <button v-if="!req.is_verified" @click.prevent="Accept(req)" class="btn btn-primary btn-sm">
@@ -139,8 +137,8 @@ export default {
       return status === 'reject' || status === 'ban'
         ? 'text-danger'
         : status === 'archive'
-        ? 'text-secondary'
-        : 'text-success';
+          ? 'text-secondary'
+          : 'text-success';
     },
     async Unblock(req) {
       try {
@@ -203,7 +201,15 @@ export default {
 </script>
 
 <style scoped>
-.text-danger { color: red; }
-.text-success { color: green; }
-.text-secondary { color: gray; }
+.text-danger {
+  color: red;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-secondary {
+  color: gray;
+}
 </style>
