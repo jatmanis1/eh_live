@@ -56,7 +56,7 @@ export default {
       try {
         const proId = this.$route.params.id; // Get service ID from route
         const response = await this.$axios.get(
-          `http://localhost:5000/api/booking/${proId}`,
+          `/api/booking/${proId}`,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -74,7 +74,7 @@ export default {
       try {
         const proId = this.$route.params.id; // Get service ID from route
         const response = await this.$axios.post(
-          `http://localhost:5000/api/booking/${proId}`,
+          `/api/booking/${proId}`,
           {},
           {
             headers: {
