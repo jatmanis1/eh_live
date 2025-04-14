@@ -6,6 +6,7 @@
       <h2 class="text-primary mb-0">{{ welcomeMessage }}</h2>
       <h2 class="text-primary mb-0">Welcome, {{ $currentUser.username }}!</h2>
 
+        
         <!-- <div>
           <button @click="collect_data" class="btn btn-outline-primary me-2">
             <i class="bi bi-download"></i> Load Data
