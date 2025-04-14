@@ -6,6 +6,7 @@
       <h2 class="text-primary mb-0">{{ welcomeMessage }}</h2>
       <h2 class="text-primary mb-0">Welcome, {{ $currentUser.username }}!</h2>
 
+        
         <!-- <div>
           <button @click="collect_data" class="btn btn-outline-primary me-2">
             <i class="bi bi-download"></i> Load Data
@@ -283,7 +284,7 @@ export default {
     },
     async getProtectedData() {
       try {
-        const response = await this.$axios.get("http://localhost:5000/api/user", {
+        const response = await this.$axios.get("/api/user", {
           headers: { Authorization: `Bearer ${this.token}` },
         });
         this.protectedData = response.data;
@@ -295,7 +296,7 @@ export default {
     async reqAccept(req_id) {
       try {
         const response = await this.$axios.put(
-          `http://localhost:5000/api/user/${req_id}`,
+          `/api/user/${req_id}`,
           { update: "accept" 
 
           },
@@ -313,7 +314,7 @@ export default {
     async reqReject(req_id) {
       try {
         const response = await this.$axios.put(
-          `http://localhost:5000/api/user/${req_id}`,
+          `/api/user/${req_id}`,
           { update: "reject" },
           {
             headers: { Authorization: `Bearer ${this.token}` },
@@ -329,7 +330,7 @@ export default {
     async reqClose(req_id) {
       try {
         const response = await this.$axios.put(
-          `http://localhost:5000/api/user/${req_id}`,
+          `/api/user/${req_id}`,
           { update: "close",
           req_rating: this.selectedReq.req_rating,
           req_remarks: this.selectedReq.req_remark,
@@ -350,7 +351,7 @@ export default {
     async reqEdit(req_id) {
       try {
         const response = await this.$axios.put(
-          `http://localhost:5000/api/user/${req_id}`,
+          `/api/user/${req_id}`,
           { 
             update: "edit",
 

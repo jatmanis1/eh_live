@@ -90,7 +90,7 @@
             return;
           }
   
-          const response = await axios.get("http://localhost:5000/api/profile", {
+          const response = await axios.get("/api/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -113,7 +113,7 @@
             return;
           }
   
-          await axios.put("http://localhost:5000/api/profile", this.editUser, {
+          await axios.put("/api/profile", this.editUser, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

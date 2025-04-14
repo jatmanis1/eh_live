@@ -96,7 +96,7 @@ export default {
 
     async triggerjob() {
       try {
-        const response = await this.$axios.get('http://localhost:5000/job1', {
+        const response = await this.$axios.get('/job1', {
 
         });
 
@@ -113,7 +113,7 @@ export default {
 
     async fetchAdminData() {
       try {
-        const response = await this.$axios.get("http://localhost:5000/api/admindata");
+        const response = await this.$axios.get("/api/admindata");
         if (response.data) {
           this.adminData = this.formatAdminData(response.data);
         } else {

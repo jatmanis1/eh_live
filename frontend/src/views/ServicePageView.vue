@@ -74,7 +74,7 @@ export default {
     async fetchServiceDetails() {
       try {
         const serviceId = this.$route.params.id;
-        const response = await this.$axios.get(`http://localhost:5000/api/service/${serviceId}`);
+        const response = await this.$axios.get(`/api/service/${serviceId}`);
         this.service = response.data.service;
         this.professionals = response.data.pros;
       } catch (error) {

@@ -53,7 +53,7 @@ export default {
   methods: {
     async fetchServices() {
       try {
-        const response = await this.$axios.get('http://localhost:5000/api/admin/service');
+        const response = await this.$axios.get('/api/admin/service');
         this.services = response.data.services;
       } catch (error) {
         console.error('Failed to fetch services:', error.response?.data || error);
@@ -68,7 +68,7 @@ export default {
       
       try {
         const response = await this.$axios.put(
-          `http://localhost:5000/api/register/${this.currentUser.id}`,
+          `/api/register/${this.currentUser.id}`,
           { user_service: this.user_service, user_exp: this.user_exp }
         );
         

@@ -165,7 +165,7 @@ export default {
     async fetchServices() {
       this.loading = true;
       try {
-        const response = await this.$axios.get(`http://localhost:5000/api/admin/service?page=${this.currentPage}`);
+        const response = await this.$axios.get(`/api/admin/service?page=${this.currentPage}`);
         this.services = response.data.services;
         this.totalPages = response.data.total_pages;
       } catch (error) {
@@ -176,7 +176,7 @@ export default {
     },
     async addService() {
       try {
-        await this.$axios.post(`http://localhost:5000/api/admin/service`, this.newService,
+        await this.$axios.post(`/api/admin/service`, this.newService,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -197,7 +197,7 @@ export default {
     },
     async saveService() {
       try {
-        await this.$axios.put(`http://localhost:5000/api/admin/service/${this.selectedService.id}`, this.selectedService,
+        await this.$axios.put(`/api/admin/service/${this.selectedService.id}`, this.selectedService,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -213,7 +213,7 @@ export default {
     async deleteService(id) {
       if (confirm('Are you sure you want to delete this service?')) {
         try {
-          await this.$axios.delete(`http://localhost:5000/api/admin/service/${id}`);
+          await this.$axios.delete(`/api/admin/service/${id}`);
           this.fetchServices();
         } catch (error) {
           console.error('Error deleting service:', error);
