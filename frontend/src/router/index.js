@@ -53,6 +53,6 @@ router.beforeEach((to, from, next) => {
 
     next({ path: '/login' });
   } else {
-    next({ path: '/' });  }
+    next();  }
 });
 export default router
