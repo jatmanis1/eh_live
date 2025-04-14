@@ -85,7 +85,7 @@ export default {
     },
     async register() {
       try {
-        const response = await this.$axios.post('http://localhost:5000/api/register', {
+        const response = await this.$axios.post('/api/register', {
           username: this.username,
           password: this.password,
           user_email: this.email,
