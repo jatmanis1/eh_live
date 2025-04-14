@@ -111,7 +111,7 @@ export default {
   methods: {
     async collect_data() {
       try {
-        const response = await this.$axios.get('http://localhost:5000/api/admin/cust', {
+        const response = await this.$axios.get('/api/admin/cust', {
           headers: { Authorization: `Bearer ${this.token}` },
         });
         this.Data1 = response.data.custs;
@@ -141,7 +141,7 @@ export default {
     },
     async Unblock(req) {
       try {
-        await this.$axios.put(`http://localhost:5000/api/admin/cust/${req.id}`, {
+        await this.$axios.put(`/api/admin/cust/${req.id}`, {
           id: req,
           status: 'unblocked',
         }, {
@@ -155,7 +155,7 @@ export default {
     },
     async Block(req) {
       try {
-        await this.$axios.put(`http://localhost:5000/api/admin/cust/${req.id}`, {
+        await this.$axios.put(`/api/admin/cust/${req.id}`, {
           id: req,
           status: 'blocked',
         }, {
@@ -169,7 +169,7 @@ export default {
     },
     async Accept(req) {
       try {
-        await this.$axios.put(`http://localhost:5000/api/admin/cust/${req.id}`, {
+        await this.$axios.put(`/api/admin/cust/${req.id}`, {
           id: req,
           verify: '1',
         }, {
@@ -183,7 +183,7 @@ export default {
     },
     async Reject(req) {
       try {
-        await this.$axios.put(`http://localhost:5000/api/admin/cust/${req.id}`, {
+        await this.$axios.put(`/api/admin/cust/${req.id}`, {
           id: req,
           verify: '0',
         }, {
