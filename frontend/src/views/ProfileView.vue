@@ -90,7 +90,7 @@
             return;
           }
   
-          const response = await axios.get("/api/profile", {
+          const response = await $axios.get("/api/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
