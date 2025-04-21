@@ -46,19 +46,19 @@ export function isAuthenticated() {
 
     // Check if all exist
     if (!token || !user || !expiry) {
-        alert('Missing token, user, or expiry.');
+        console.log('Missing token, user, or expiry.');
         clearAuthStorage();
         return false;
     }
 
     // Check expiry time
     if (Date.now() > parseInt(expiry)) {
-        alert('Token expired.');
+        console.log('Token expired.');
         clearAuthStorage();
         return false;
     }
     console.log(Date.now(), parseInt(expiry))
-    // alert('tokenn and expiry found')
+    console.log('tokenn and expiry found')
     // Optionally: Decode token and check if it's valid
     // try {
     // const decoded = jwtDecode(token);
