@@ -9,7 +9,7 @@ class RegisterAPI(Resource):
         """Test API for login"""
         payload = {"username": "mj", "password": "mj"}
         try:
-            response = requests.post('http://127.0.0.1:5000/api/login', json=payload)
+            response = requests.post('/api/login', json=payload)
             return response.json(), response.status_code
         except requests.exceptions.RequestException as e:
             return {"error": str(e)}, 500
