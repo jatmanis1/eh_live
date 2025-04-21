@@ -51,8 +51,8 @@ export default {
         if (response.data.token) {
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('user', JSON.stringify(response.data.user));
-          // const expiryTime = Date.now() + 2 * 60 * 60 * 1000; // 2 hours in milliseconds
-          const expiryTime = Date.now() + 3*1000; // 2 hours in milliseconds
+          const expiryTime = Date.now() + 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+          // const expiryTime = Date.now() + 3*1000; // 2 hours in milliseconds
           localStorage.setItem('tokenExpiry', expiryTime.toString());
           if (response.data.user.user_role === 'admin') {
             this.$router.push('/admindashboard');
