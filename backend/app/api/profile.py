@@ -9,7 +9,7 @@ class ProfileApi(Resource):
         user_username = get_jwt_identity()
         print(user_username,'fghjkl')
         user = User.query.filter_by(user_username=user_username).first()
-
+        
         if not user:
             return {"message": "Uwwser not found"}, 404
 

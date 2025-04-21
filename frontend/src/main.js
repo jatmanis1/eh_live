@@ -11,7 +11,7 @@ import { currentUser } from './utils/current_user';
 
 // ✅ Define backend base URL in one place
 const BACKEND_URL = 'https://easyhomebackend.vercel.app';
-
+// console.log('asdfghgfds')
 // ✅ Create a custom axios instance
 const axiosInstance = axios.create({
     baseURL: BACKEND_URL,

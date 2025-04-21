@@ -79,6 +79,7 @@ export default {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       this.token = null;
+      this.user = null;
       this.$router.replace("/login");
     },
     }
