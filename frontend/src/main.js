@@ -10,8 +10,8 @@ import axios from 'axios';
 import { currentUser } from './utils/current_user';
 
 // ✅ Define backend base URL
-const BACKEND_URL = 'http://127.0.0.1:5000'; // Change to your actual backend in production
-// const BACKEND_URL = 'https://easyhomebackend.vercel.app';
+// const BACKEND_URL = 'http://127.0.0.1:5000'; // Change to your actual backend in production
+const BACKEND_URL = 'https://easyhomebackend.vercel.app';
 
 // ✅ Create a custom axios instance
 const axiosInstance = axios.create({
