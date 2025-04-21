@@ -79,7 +79,7 @@ class RegisterAPI(Resource):
             user.user_exp = data.get('user_exp', user.user_exp)
 
             db.session.commit()
-            return {"msg": "Pro profile updated successfully"}, 200
+            return {"msg": "Pro profile updated successfully", 'user':user.to_dict()}, 200
 
         except Exception as e:
             db.session.rollback()

@@ -130,6 +130,7 @@ export default {
     },
     logout() {
       localStorage.removeItem('token');
+      localStorage.removeItem('user');
       this.$router.push('/login');
     },
     getStatusClass(status) {

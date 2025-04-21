@@ -97,6 +97,8 @@ export default {
           alert(response.data.message);
           localStorage.setItem('token', response.data.response.token);
           localStorage.setItem('user', JSON.stringify(response.data.response.user));
+          const expiryTime = Date.now() + 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+          localStorage.setItem('tokenExpiry', expiryTime.toString());
           this.showModal = true;
           this.showForm = false;
         } else {

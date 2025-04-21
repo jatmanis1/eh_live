@@ -71,12 +71,16 @@ export default {
           `/api/register/${this.currentUser.id}`,
           { user_service: this.user_service, user_exp: this.user_exp }
         );
-        
+        console.log(response)
         if (response.status === 200) {
+          // console.log(response.data)
+          localStorage.removeItem('user');
+          localStorage.setItem('user', JSON.stringify(response.data.user));
           alert(response.data.msg);
           this.$router.push('/dashboard');
         }
       } catch (error) {
+        console.log(response)
         console.error('Register failed:', error.response?.data?.msg);
         this.error1 = error.response?.data?.msg || 'An error occurred';
         alert(`Register failed: ${this.error1}`);
