@@ -89,8 +89,7 @@
             console.error("JWT Token missing!");
             return;
           }
-  
-          const response = await axios.get("/api/profile", {
+          const response = await this.$axios.get("/api/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -113,7 +112,7 @@
             return;
           }
   
-          await axios.put("/api/profile", this.editUser, {
+          await this.$axios.put("/api/profile", this.editUser, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
