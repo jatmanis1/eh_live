@@ -58,7 +58,7 @@ export function isAuthenticated() {
         return false;
     }
     console.log(Date.now(), parseInt(expiry))
-    alert('tokenn and expiry found')
+    // alert('tokenn and expiry found')
     // Optionally: Decode token and check if it's valid
     // try {
     // const decoded = jwtDecode(token);
