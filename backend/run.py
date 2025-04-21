@@ -16,7 +16,11 @@ app = Flask(__name__)
 # db = SQLAlchemy()
 
 # Setup the Flask app configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+PASSWORD='C4JjrxSZ7Ptw7ySu'
+DATABASE_URL = f'postgresql://postgres.jzynmslqqtimkpsxblbz:{PASSWORD}@aws-0-us-east-1.pooler.supabase.com:6543/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Change this to a secure secret
 from app.models import db
