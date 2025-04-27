@@ -2,7 +2,7 @@
   <div class="container my-5">
     <!-- Heading -->
     <div class="text-center mb-5">
-      <h1 class="fw-bold display-5">About <span class="text-primary">EasyHome</span></h1>
+      <h1 class="fw-bold display-5">About <span class="text-primary">AxioHome</span></h1>
       <p class="text-muted fs-5">
         Reliable, Professional, and Affordable Home Services
       </p>
