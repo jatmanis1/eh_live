@@ -4,7 +4,7 @@
 This project consists of a **Flask-based backend** and a **Vue.js frontend** for managing service requests, handling user authentication, sending emails asynchronously, and providing an API interface.
 
 ##**Demo**
-https://jatmanis1-axiohome.vercel.app/
+https://axiohome.vercel.app/
 
 ## Features
 ### Backend (Flask)
