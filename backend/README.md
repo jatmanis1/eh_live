@@ -30,7 +30,7 @@ Ensure you have Python installed along with PostgreSQL and Redis.
 
 ### 1. Clone the Repository
 ```bash
- git clone https://github.com/jatmanis11/mad2_project.git
+ git clone https://github.com/jatmanis11/eh_live.git
  cd mad2_project/backend
 ```
 
