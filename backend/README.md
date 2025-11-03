@@ -91,6 +91,6 @@ flask run
 - `GET /job1`: Export completed service requests as a CSV and email admins.
 
 
-## Contributors
+## Owner & Contributors
 - jatmanis1 
 
